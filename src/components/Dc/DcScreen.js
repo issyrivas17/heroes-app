@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function HeroesApp() {
+export const DcScreen = () => {
     return (
         <>
-           <h1>Heroes App</h1>  
+            <h1>DcScreen </h1>
         </>
     )
 }
