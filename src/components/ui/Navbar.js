@@ -3,7 +3,8 @@ import { Link, NavLink } from 'react-router-dom'
 
 export const Navbar = () => {
  
-    const handleLogout = () => {
+    const handleLogout = () => { 
+        // todo por hacer /*/  
         console.log('logout') 
     }
 
