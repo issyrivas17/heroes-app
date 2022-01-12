@@ -5,6 +5,7 @@ import { DcScreen } from '../components/Dc/DcScreen';
 
 import { MarvelScreen } from '../components/Marvel/MarvelScreen';
 import { SearchScreen } from '../components/search/SearchScreen';
+import { HeroScreen } from "../components/Hero/HeroScreen";
 
 export const DashboardRoutes = () => {
     return (
@@ -14,7 +15,8 @@ export const DashboardRoutes = () => {
               <Route path = "/" element={<MarvelScreen />} /> 
               <Route path = "/dc" element = {<DcScreen/>} /> 
               <Route path = "/search" element = {<SearchScreen/>} /> 
-              <Route path = "/marvel" element = {<MarvelScreen/>} />
+              <Route path = "/marvel" element = {<MarvelScreen/>} /> 
+              <Route path = "/hero" element = {<HeroScreen/>} /> 
                </Routes> 
         </>
     )
