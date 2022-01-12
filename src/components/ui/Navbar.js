@@ -24,8 +24,12 @@ export const Navbar = () => {
                 <div className="navbar-nav">
 
                     <NavLink 
-                        activeClassName="active"
-                        className="nav-item nav-link" 
+        
+                    className={({isActive}) => {
+                        console.log(isActive)
+                        return'nav-item nav-link'
+                    } 
+                    }
                         exact
                         to="/marvel"
                     >
