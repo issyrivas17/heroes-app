@@ -1,9 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const LoginScreen = () => {
 
+    const navigate = useNavigate();  
+
+
    const handleLogin = () => {
-       console.log('handleLogin')
+       navigate ('/marvel',{
+           replace: true
+       })
    }
 
     return (

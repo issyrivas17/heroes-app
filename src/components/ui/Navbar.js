@@ -1,11 +1,14 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
-export const Navbar = () => {
+export const Navbar = () => { 
+    
+    const native = useNavigate(); 
  
     const handleLogout = () => { 
-        // todo por hacer /*/  
-        console.log('logout') 
+       native ('/login',{
+           replace: true 
+       })
     }
 
 
