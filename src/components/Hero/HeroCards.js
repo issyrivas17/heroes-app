@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+
+
 import React from 'react'
 
 export const HeroCards = ({
@@ -26,6 +29,21 @@ const imagePath= `/assets/${id}.jpg`;
             
             <h5 className='card-tittle'>{superhero}</h5>
             <p className='card-text'>{alter_ego}</p>
+             {
+
+               (alter_ego !== characters ) 
+               && <p className='text-muted'> {characters}</p>
+             } 
+            
+             <p className='card-text'> 
+             <small className='text-muted'> {first_appearance}</small>
+             
+             </p> 
+            
+            <Link to = {`/hero/${id}`}> 
+            See more...
+            </Link>
+
 
             </div>
            
