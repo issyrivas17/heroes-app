@@ -8,9 +8,31 @@ export const HeroCards = ({
     first_appearance,
     characters,
 }) => {
-    return (
-        <div>
-            {superhero} {id}
+
+const imagePath= `/assets/${id}.jpg`; 
+
+    return ( 
+       <div className='col'> 
+       <div className='card'>
+           
+
+     <div className='row no-gutters'>
+         <div className='col-4'> 
+     <img src={imagePath} className="card-img-top" alt={superhero} /> 
+        </div> 
+       <div className='col-8'>
+           
+            <div className='card-body'> 
+            
+            <h5 className='card-tittle'>{superhero}</h5>
+            <p className='card-text'>{alter_ego}</p>
+
+            </div>
+           
+           </div> 
+        </div> 
+        </div> 
         </div>
+
     )
 }
