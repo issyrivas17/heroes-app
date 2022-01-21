@@ -10,14 +10,23 @@ export const HeroScreen = () => {
 
     if (!hero) {
         return <Navigate to = '/' /> 
-    }
-    return (
-        <>
-            <h1>HeroScreen</h1> 
+    } 
 
-            <p>
-                {hero.superhero}
-            </p>
-        </>
+   const imagePath = `/assest/heroes/${hero.id}.jpg`;
+
+
+
+    return (
+        <div className='row mt-5'> 
+        <div className='col-4'> 
+        <img 
+        src={imagePath} 
+         alt ={hero.superhero} 
+         className='img-thumbnail' 
+        
+        />   
+           </div>   
+          <d 
+        </div>
     )
 }
