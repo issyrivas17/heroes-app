@@ -1,10 +1,11 @@
 import React from 'react'
-import { Navigate, useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { getHeroById } from '../../selectors/getHeroById';
 
 export const HeroScreen = () => {
 
     const {heroId} = useParams(); 
+    const navigate = useNavigate(); 
      
     const hero= getHeroById (heroId); 
 
@@ -24,7 +25,8 @@ export const HeroScreen = () => {
 
    const imagePath=`/assets/${id}.jpg`; 
 
-   const handleReturn = () => {
+   const handleReturn = () => { 
+       navigate (-1)
        
    }
 
@@ -33,7 +35,7 @@ export const HeroScreen = () => {
         <div className='col-4'> 
         <img 
         src={imagePath} 
-         alt ={hero.superhero} 
+         alt ={superhero} 
          className='img-thumbnail' 
         
         />   
