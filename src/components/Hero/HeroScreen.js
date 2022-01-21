@@ -22,13 +22,11 @@ export const HeroScreen = () => {
     } = hero ; 
 
 
-   const imagePath=`/assest/${id}.jpg`; 
+   const imagePath=`/assets/${id}.jpg`; 
 
    const handleReturn = () => {
        
    }
-
-
 
     return (
         <div className='row mt-5'> 
