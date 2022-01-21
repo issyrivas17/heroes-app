@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import { getHeroById } from '../../selectors/getHeroById';
 
 export const HeroScreen = () => {
@@ -8,6 +8,9 @@ export const HeroScreen = () => {
      
     const hero= getHeroById (heroId); 
 
+    if (!hero) {
+        return <Navigate to = '/' /> 
+    }
     return (
         <>
             <h1>HeroScreen</h1> 
