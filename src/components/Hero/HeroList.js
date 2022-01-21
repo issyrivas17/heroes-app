@@ -1,5 +1,5 @@
 import React from 'react'
-import { getHeroesByPublisher } from '../../selectors/getHeroById'
+import { getHeroesByPublisher } from '../../selectors/getHeroesByPublisher';
 import { HeroCards } from './HeroCards';
 
 export const HeroList = ({publisher}) => {
