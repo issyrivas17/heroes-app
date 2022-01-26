@@ -1,6 +1,20 @@
 import React from 'react'
 
 export const SearchScreen = () => {
+
+
+
+
+const handleSearch = () => {
+
+}
+
+
+
+
+
+
+
     return (
         <>
             <h1>Search </h1> 
@@ -16,12 +30,11 @@ export const SearchScreen = () => {
                 placeholder='Search for a hero' 
                 className='form-control' 
                 autoComplete='off' 
+                value={searchText} 
                 /> 
 
              <button 
-             className='btn btn-outline-primary'
-             
-             
+             className='btn btn-outline-primary mt-1'
              type='submit'>
                  Search ... 
              </button>
