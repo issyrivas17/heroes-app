@@ -1,4 +1,6 @@
 import React from 'react' 
+import { getHeroesByName } from '../../selectors/getHeroesByName';
+import { HeroCards } from '../Hero/HeroCards';
 import {useForm} from "../hooks/useForm"
 
 ;
@@ -10,7 +12,8 @@ export const SearchScreen = () => {
         searchText:'', 
     })
    
-    const {searchText} = formValues; 
+    const {searchText} = formValues;  
+    const heroesFileted= getHeroesByName ('ALGO');
 
 const handleSearch = (e) => {  
     e.preventDefault(); 
@@ -23,9 +26,9 @@ const handleSearch = (e) => {
             <h1>Search </h1> 
            <hr/> 
            <div className='row'> 
+
            <div className='col-5'> 
-           <h4>Form</h4>
-            <hr/> 
+           </div> 
 
             <form onSubmit={handleSearch}> 
                 <input
@@ -48,8 +51,25 @@ const handleSearch = (e) => {
             </form>
 
            </div>
+           
+           <div className='col-7'>
+               <h4>Results</h4> 
+               <hr/> 
+                
+                {
+                    heroesFileted.map(hero=> (
+                        <HeroCards
+                        key={hero.id}
+                        {...hero} 
+                         
+                        /> 
+                    ))
+                }
 
-           </div> 
+
+
+              </div>  
+           
 
 
         </>
