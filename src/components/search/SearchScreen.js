@@ -1,20 +1,23 @@
-import React from 'react'
+import React from 'react' 
+import {useForm} from "../hooks/useForm"
+
+;
+
 
 export const SearchScreen = () => {
+ 
+    const [formValues,handleInputChange] = useForm ({
+        searchText:'', 
+    })
+   
+    const {searchText} = formValues; 
 
+const handleSearch = (e) => {  
+    e.preventDefault(); 
+    console.log(searchText)
 
-
-
-const handleSearch = () => {
-
+    
 }
-
-
-
-
-
-
-
     return (
         <>
             <h1>Search </h1> 
@@ -24,13 +27,14 @@ const handleSearch = () => {
            <h4>Form</h4>
             <hr/> 
 
-            <form> 
+            <form onSubmit={handleSearch}> 
                 <input
-                type= 'text' 
+                type='text' 
                 placeholder='Search for a hero' 
                 className='form-control' 
                 autoComplete='off' 
-                value={searchText} 
+                defaultValue={searchText}  
+                onChange={handleInputChange} 
                 /> 
 
              <button 
