@@ -8,21 +8,21 @@ import {useForm} from "../hooks/useForm"
 
 ;
 
-
 export const SearchScreen = () => {
 
    const navigate = useNavigate (); 
 
    const location = useLocation();  
 
-  const {q=''} = queryString.parse(location.search);
+   console.log(location.search); 
 
- const [formValues,handleInputChange] = useForm ({
-        searchText: q, 
-    }); 
+
+    const [formValues,handleInputChange] = useForm ({
+        searchText:'', 
+    })
    
     const {searchText} = formValues;  
-    const heroesFileted= getHeroesByName (q);
+    const heroesFileted= getHeroesByName ('ALGO');
 
 const handleSearch = (e) => {  
     e.preventDefault(); 
