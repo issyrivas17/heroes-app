@@ -15,16 +15,14 @@ export const SearchScreen = () => {
 
    const location = useLocation();  
 
-  const query = queryString.parse(location.search);
-  console.log(query)
+  const {q=''} = queryString.parse(location.search);
 
-
-    const [formValues,handleInputChange] = useForm ({
-        searchText:'', 
-    })
+ const [formValues,handleInputChange] = useForm ({
+        searchText: q, 
+    }); 
    
     const {searchText} = formValues;  
-    const heroesFileted= getHeroesByName ('ALGO');
+    const heroesFileted= getHeroesByName (q);
 
 const handleSearch = (e) => {  
     e.preventDefault(); 
