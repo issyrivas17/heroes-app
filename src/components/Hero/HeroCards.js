@@ -15,7 +15,7 @@ export const HeroCards = ({
 const imagePath= `/assets/${id}.jpg`; 
 
     return ( 
-       <div className='col'> 
+       <div className='col animate__animated animate__fadeIn'> 
        <div className='card'>
            
 
@@ -23,7 +23,7 @@ const imagePath= `/assets/${id}.jpg`;
          <div className='col-4'> 
      <img src={imagePath} className="card-img-top" alt={superhero} /> 
         </div> 
-       <div className='col-8'>
+       <div className='col-8 '>
            
             <div className='card-body'> 
             

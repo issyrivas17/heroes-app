@@ -33,6 +33,12 @@ export const SearchScreen = () => {
        <>
          <h1>Search </h1>
          <hr />
+         {
+             (q === '')
+             ? <div className='alert alert-info'>Search for a hero</div>
+             :(heroesFileted.length === 0) 
+             && <div className='alert alert-danger'>No results : { q}</div>
+         }
          <div className="row">
            <div className="col-5"></div>
    
