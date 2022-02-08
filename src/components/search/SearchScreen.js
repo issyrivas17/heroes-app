@@ -37,7 +37,7 @@ export const SearchScreen = () => {
              (q === '')
              ? <div className='alert alert-info'>Search for a hero</div>
              :(heroesFileted.length === 0) 
-             && <div className='alert alert-danger'>No results : { q}</div>
+             && <div className='alert alert-danger'>No results : {q}</div>
          }
          <div className="row">
            <div className="col-5"></div>
