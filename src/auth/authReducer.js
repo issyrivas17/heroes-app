@@ -1,5 +1,5 @@
 
-// const name = {
+// const state = {
 //     name : 'Ismenia',
 //     logged : true 
 // }
