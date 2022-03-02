@@ -4,11 +4,9 @@ import { authReducer } from './auth/authReducer';
 import { AppRouter } from './routers/AppRouter' 
 
 const init = () => {
-    return {
-        logged: true,
-        name: 'Ismenia Temporal'
+    return JSON.parse (localStorage.getItem('user') ) || {logged:false}; 
     }
-}
+
 
 export const HeroesApp = () => {
 
