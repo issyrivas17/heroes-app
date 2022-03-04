@@ -4,7 +4,7 @@
 //     logged : true 
 // }
 
-import { types } from "../types";
+import { types } from "../types/types";
 
  
 
