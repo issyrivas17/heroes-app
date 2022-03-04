@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../auth/authContext';
 import { types } from '../../types/types';
 
+
 export const Navbar = () => { 
     
   const {user,dispatch} = useContext (AuthContext) 
@@ -13,7 +14,7 @@ export const Navbar = () => {
         
         dispatch ({
             type: types.logout
-        }) 
+        })  
 
        native ('/login',{
            replace: true 

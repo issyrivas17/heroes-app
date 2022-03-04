@@ -13,7 +13,7 @@ export const HeroesApp = () => {
   const [user,dispatch]=useReducer( authReducer,{},init); 
 
    useEffect(() => {
-      if (user) return; 
+      if (!user) return; 
       localStorage.getItem('user',JSON.stringify(user)) ; 
       
   }, [user]); 
