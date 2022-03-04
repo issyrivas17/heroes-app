@@ -7,9 +7,12 @@ import { DashboardRoutes } from './DashboardRoutes';
 
 export const AppRouter = () => {
     return (
-        < BrowserRouter> 
+        < BrowserRouter>  
            <Routes> 
               <Route path = "/login" element = {<LoginScreen/>} /> 
+  
+             <Route path=' '
+
 
               <Route path="/*" element= {<DashboardRoutes/>} /> 
                </Routes> 
