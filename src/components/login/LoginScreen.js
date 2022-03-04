@@ -18,7 +18,7 @@ export const LoginScreen = () => {
 
         navigate ('/marvel',{
        replace: true
-       }) 
+      }) 
 
 
    }  
