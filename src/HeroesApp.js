@@ -16,8 +16,7 @@ export const HeroesApp = () => {
       if (user) return; 
       localStorage.getItem('user',JSON.stringify(user)) ; 
       
-  }, [user]);
-
+  }, [user]); 
 
     return (
         <> 
