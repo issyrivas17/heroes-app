@@ -14,7 +14,7 @@ export const AppRouter = () => {
              <Route path=' '
 
 
-              <Route path="/*" element= {<DashboardRoutes/>} /> 
+              <Route path="/*" element= {<DashboardRoutes/>}/>  
                </Routes> 
         </ BrowserRouter>
     )
