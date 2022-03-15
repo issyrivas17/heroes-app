@@ -12,7 +12,7 @@ export const AppRouter = () => {
            <Routes> 
               <Route path = "/login" element = {<LoginScreen/>} /> 
   
-             <Route path='/app' element={
+             <Route path='/*' element={
                  <PrivateRoute> 
                     <DashboardRoutes /> 
                  </PrivateRoute>
